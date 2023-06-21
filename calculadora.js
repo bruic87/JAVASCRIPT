@@ -26,25 +26,26 @@ function imprimeResultado(num1, num2, resultado, operacao) {
     return `O resultado de ${num1} ${operacao} ${num2} é: ${resultado}`
 }
 
-function principal(num1, num2, operacao) {
-    let resultado = 0;
-    
+function calcula(num1, num2, operacao) {
     if (operacao === '+') {
-        resultado = soma(num1, num2);
+        return soma(num1, num2);
     }
     
     if (operacao === '-') {
-        resultado = subtracao(num1, num2);;
+        return subtracao(num1, num2);;
     }
 
     if (operacao === '*') {
-        resultado = multiplicacao(num1, num2);
+        return multiplicacao(num1, num2);
     }
 
     if (operacao === '/') {
-        resultado = divisao(num1, num2);
+        return divisao(num1, num2);
     }
+}
 
+function principal(num1, num2, operacao) {
+    const resultado = calcula(num1, num2, operacao);
     return imprimeResultado(num1, num2, resultado, operacao);
 }
 
