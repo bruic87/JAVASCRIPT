@@ -1,11 +1,3 @@
-const prompt = require('prompt-sync')();
-
-const operacao = prompt('Informe a operacao desejada (+, -, *, /): ');
-
-const num1 = Number(prompt('Informe o primeiro número: '));
-
-const num2 = Number(prompt('Informe o segundo número: '));
-
 function soma(num1, num2) {
     return num1 + num2;
 }
@@ -44,11 +36,21 @@ function calcula(num1, num2, operacao) {
     }
 }
 
-function principal(num1, num2, operacao) {
+function principal() {
+    //Cria o prompt de entrada de dados
+    const prompt = require('prompt-sync')();
+    //Captura a operação desejada
+    const operacao = prompt('Informe a operacao desejada (+, -, *, /): ');
+    //Captura os números
+    const num1 = Number(prompt('Informe o primeiro número: '));
+    const num2 = Number(prompt('Informe o segundo número: '));
+    //Calcula o resultado
     const resultado = calcula(num1, num2, operacao);
-    return imprimeResultado(num1, num2, resultado, operacao);
+    //Gera a saída de texto
+    const saidaDeTexto = imprimeResultado(num1, num2, resultado, operacao);
+    //Imprime o resultado
+    console.log(saidaDeTexto);
 }
 
-const output = principal(num1, num2, operacao);
-
-console.log(output);
+//Roda o programa
+principal();
