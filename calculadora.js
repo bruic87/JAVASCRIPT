@@ -48,5 +48,9 @@ function principal() {
     console.log(saidaDeTexto);
 }
 
+module.exports = {
+    principal
+}
+
 //Roda o programa
-principal();
+//principal();
