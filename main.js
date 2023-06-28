@@ -30,6 +30,7 @@ do {
         default:
             console.log('Opção inválida!');
     }
+    const continuar = prompt('\n Deseja continuar? (s/n): ')
 } while (condicao);
 
 //calculadora.principal();
